@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+	<title>Reproductor de video</title>
+	<h1> </h1>
+	<link rel="stylesheet" type="text/css" href="css/reproductor.css">
+	<script src="js/reproductor.js" href="js/reproductor.js">
+	</script>
+	<script src="js/validar.js" href="js/validar.js">
+	</script>
+</head>
+<body>
+
+<section id="reproductor">
+	<video id="media" width="720" height="400">
+<source src="sources/trailer.mp4" type="video/mp4">
+<source src="sources/trailer.mp4" type="video/ogg">
+	</video>
+
+<nav>
+	<div id="botones">
+	<input type="button" id="play" onclick="play()" value="Reproducir">
+	<input type="button" id="mute" onclick="mute()" name="" value="Silenciar">		
+	</div>
+	<div id="barra">
+	<div id="progreso"></div>
+	</div>
+	<div id="control">
+	<input type="range" id="volume" min="0" max="10" step="0.1" value="0.6" name="">
+	</div>
+	<div class="clear"></div>
+</nav>
+</section>
+
+<p><a href="#popup" class="pop"></a></p>
+<div id="popup" class="overlay">
+	<div id="popupBody">
+		<h2>Registrar actores</h2>
+		<a id="cerrar" href="#">&times;</a>
+		<div class="popupContent">
+			<form name=tuformulario method="Post" action="insert.php">
+				<label for="cveactor">Clave actor: </label>
+				<input id="cveactor" type="text"
+				class="validate" name="cveactor" required>
+				<p></p>
+				<label for="nombre"> Nombre del actor: </label>
+				<input id="nombre" type="text" class="validate"
+				name="nombre" required>
+				<p></p>
+				<label for="apellidos">Apellidos: </label>
+				<input id="apellidos" type="text" class="validate"
+				name="apellidos" required>
+				<p></p>
+				<label for="nacionalidad">Nacionalidad: </label>
+				<select id="nacionalidad"  type="text" class="validate"
+				name="nacionalidad" required>
+				<option>Mexicana</option>
+				<option>Estadounidense</option>
+				<option>Canadiense</option>
+				<option>Aleman</option>
+				<option>Sueco</option>
+				<option>Noruego</option>
+				<option>Cubano</option>
+				<option>Ruso</option>
+				<option>Venezolano</option>
+				<option>Italiano</option>
+				</select>
+				<p></p>
+				<label for="edad">Edad: </label>
+				<input id="edad" type="text" class="validate"
+				name="edad" required>
+				<p></p>
+				<h3 align="center">
+					<td><input id="enviar" type="button" onclick="pregunta()" name="action" value="Enviar"></td>
+				</h3>
+			</div></h2>
+        </div>
+    </div>
+</div>
+
+<p><a href="consultar.php" target="_blank" onclick="window.open(this.href, this.target, 'width=800,height=800'); return false;" class="pop1"></a></p>
+<div id="popup1" class="overlay1">
+    <div id="popupBody1" >
+        <h2>Registro de Actores</h2>
+        <a id="cerrar1" href="#">&times;</a>
+        <div class="popupContent1">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<p><a href="editar2.php" target="_blank" onclick="window.open(this.href, this.target, 'width=800,height=800'); return false;" class="pop2"></a></p>
+<div id="popup2" class="overlay1">
+    <div id="popupBody2" >
+        <h2>Registro de Actores</h2>
+        <a id="cerrar2" href="#">&times;</a>
+        <div class="popupContent2">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<p><a href="delete.php" target="_blank" onclick="window.open(this.href, this.target, 'width=800,height=800'); return false;" class="pop3"></a></p>
+<div id="popup3" class="overlay3">
+    <div id="popupBody3" >
+        <h2>Registro de Actores</h2>
+        <a id="cerrar3" href="#">&times;</a>
+        <div class="popupContent3">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
